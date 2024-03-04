@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #sum {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #diff {
+            display: flex;
+            gap: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sum">
+        <input type="text" id="input1" />
+        <span>+</span>
+        <input type="text" id="input2" />
+        <span> = </span>
+        <button type="button" id="sumButton" onclick="calculateSum()">Add</button>
+        <p id="sumResult"></p>
+    </div>
+
+    <script>
+        function calculateSum() {
+            const inputValue1 = document.getElementById("input1").value;
+            const inputValue2 = document.getElementById("input2").value;
+            const sumResult = parseInt(inputValue1) + parseInt(inputValue2);
+            document.getElementById("sumResult").innerHTML = sumResult;
+        }
+    </script>
+</body>
+
+</html>
